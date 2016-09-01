@@ -22,7 +22,7 @@ end
  -- public 
  function jwt.encode(payload, key)
  
-	header = { typ='JWT', alg="HS256" }
+	header = { typ='JWT', alg="RS256" }
 
 	segments = { 
 		urlsafeB64Encode(jsonEncode(header)),
