@@ -2,7 +2,7 @@
  
 -- private
 local function sign(msg, key)
-  result = crypto.hmac(key, msg, crypto.sha256).digest()
+  result = crypto.hmac(key, msg, crypto.sha256(msg)).digest()
 	return result
 end
 
